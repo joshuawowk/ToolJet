@@ -7,9 +7,9 @@ services:
     container_name: Tooljet-app
     image: tooljet/tooljet-ce:latest
     restart: always
-    env_file: .env
+    # env_file: .env
     ports:
-      - 80:80
+      - 8099:80
     environment:
       SERVE_CLIENT: "true"
       PORT: "80"
@@ -18,6 +18,6 @@ services:
   postgrest:
     image: postgrest/postgrest:v12.0.2
     restart: always
-    env_file: .env
+    # env_file: .env
     environment:
       - PGRST_SERVER_PORT=80
